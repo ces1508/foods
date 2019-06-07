@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
-  FlatList
+  FlatList,
+  StyleSheet
 } from 'react-native'
 import Category from '../components/category'
 
@@ -45,6 +46,7 @@ export default class CategoriesScreen extends Component {
   render () {
     return (
       <FlatList
+        style={styles.list}
         keyExtractor={item => item.id.toString()}
         data={this.state.categories}
         renderItem={({ item }) => <Category category={item} />}
@@ -52,3 +54,9 @@ export default class CategoriesScreen extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  list: {
+    paddingHorizontal: 10
+  }
+})

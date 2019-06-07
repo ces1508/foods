@@ -28,7 +28,10 @@ export default Category
 const styles = StyleSheet.create({
   image: {
     width: '100%',
-    height: 150
+    height: 150,
+    marginVertical: 5,
+    borderRadius: 10,
+    overflow: 'hidden'
   },
   container: {
     height: '100%',
