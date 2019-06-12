@@ -14,7 +14,7 @@ const Category = props => {
       resizeMode='cover'
       style={styles.image}
       source={{ uri: image }}>
-      <TouchableOpacity onPress={() => alert('hola mundo')}>
+      <TouchableOpacity onPress={() => props.navigation.navigate('products', { category: props.category })}>
         <View style={styles.container}>
           <Text style={styles.name}>{name}</Text>
         </View>
@@ -36,14 +36,14 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     width: '100%',
-    backgroundColor: 'rgba(0, 0, 0, .5)',
+    backgroundColor: 'rgba(0, 0, 0, .25)',
     alignItems: 'center',
     justifyContent: 'center'
   },
   name: {
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: 25,
+    fontSize: 30,
     color: '#fff'
   }
 })
