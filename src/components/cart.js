@@ -1,33 +1,45 @@
 import React from 'react'
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { View, Text, StyleSheet } from 'react-native'
+import { connect } from 'react-redux'
+import Theme from '../Theme'
+
+const mapStateToProps = state => ({ shoppingCart: state.shoppingCart })
 
 const CartIcon = props => (
   <View style={styles.container}>
-    <Text style={styles.badge}>5</Text>
-    <Icons style={styles.icon} name='cart-outline' size={30} />
+    <Text style={styles.badge}>{props.shoppingCart.products}</Text>
+    <Icons style={styles.icon} name='cart-outline' size={35} />
   </View>
 )
 
-export default CartIcon
+export default connect(mapStateToProps)(CartIcon)
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative'
+    position: 'relative',
+    height: '100%',
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
   badge: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    backgroundColor: 'green',
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    backgroundColor: Theme.colors.secondary,
     textAlign: 'center',
     textAlignVertical: 'center',
-    color: '#fff',
+    color: Theme.colors.text.secundary,
     position: 'absolute',
-    top: -10,
-    right: 5
+    top: 3,
+    right: 0,
+    zIndex: 2,
+    lineHeight: 18
   },
   icon: {
-    color: '#000'
+    alignSelf: 'flex-end',
+    marginRight: 5,
+    color: Theme.colors.secondary,
+    fontWeight: '100'
   }
 })

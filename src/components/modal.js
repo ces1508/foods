@@ -4,6 +4,7 @@ import Icons from 'react-native-vector-icons/FontAwesome'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { hideModal } from '../ducks/modal'
+import Theme from '../Theme'
 
 const mapStateToProps = state => ({ ...state.modal })
 const mapDispatchToProps = {
@@ -27,14 +28,15 @@ const styles = StyleSheet.create({
   modal: {
     flex: 1,
     height: '100%',
-    backgroundColor: 'rgba(0, 0, 0, .3)',
+    backgroundColor: 'rgba(0, 0, 0, .8)',
     justifyContent: 'center',
     alignItems: 'center'
   },
   close: {
     position: 'absolute',
-    right: 10,
-    top: 0
+    right: 0,
+    top: 0,
+    color: Theme.colors.white
   }
 })
 
