@@ -51,17 +51,6 @@ const styles = StyleSheet.create({
   actions: {
     paddingVertical: 5,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  icon: {
-    marginRight: 10,
-    color: Theme.colors.iconAdd
-  },
-  modal: {
-    flex: 1,
-    height: '100%',
-    backgroundColor: 'black',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: 'space-between'
   }
 })
