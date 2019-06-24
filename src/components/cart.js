@@ -9,7 +9,7 @@ const mapStateToProps = state => ({ shoppingCart: state.shoppingCart })
 const CartIcon = props => (
   <View style={styles.container}>
     <Text style={styles.badge}>{props.shoppingCart.products}</Text>
-    <Icons style={styles.icon} name='cart-outline' size={35} />
+    <Icons onPress={() => props.navigation.navigate('shoppingCart')} style={styles.icon} name='cart-outline' size={35} />
   </View>
 )
 

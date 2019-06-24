@@ -45,10 +45,9 @@ ProductCard.defaultProps = {
 const styles = StyleSheet.create({
   card: {
     borderRadius: 8,
-    overflow: 'hidden',
     flexDirection: 'row',
     marginBottom: 40,
-    flex: 1,
+    height: 'auto',
     backgroundColor: Theme.colors.white
   },
   cardContainer: {

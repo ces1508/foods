@@ -4,6 +4,7 @@ import CategoriesScreen from '../screens/categories'
 import ProductsScreen from '../screens/products'
 import CartIcon from '../components/cart'
 import ShoppingCartScreen from '../screens/shoppingCart'
+import Form from '../screens/form'
 import Theme from '../Theme'
 
 const defualtHeaderStyles = {
@@ -11,19 +12,16 @@ const defualtHeaderStyles = {
   headerStyle: {
     backgroundColor: Theme.colors.maingBgColor
   }
-  // headerTitleStyle: {
-  //   color: Theme.colors.secondary
-  // }
 }
 
 const stack = createStackNavigator({
   home: {
     screen: CategoriesScreen,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
       ...defualtHeaderStyles,
       title: 'Categorias',
-      headerRight: <CartIcon />
-    }
+      headerRight: <CartIcon navigation={navigation} />
+    })
   },
   products: {
     screen: ProductsScreen,
@@ -32,7 +30,7 @@ const stack = createStackNavigator({
       return {
         ...defualtHeaderStyles,
         title: categoryName,
-        headerRight: <CartIcon />
+        headerRight: <CartIcon navigation={navigation} />
       }
     }
   },
@@ -41,6 +39,16 @@ const stack = createStackNavigator({
     navigationOptions: {
       ...defualtHeaderStyles,
       title: 'Carrito de compras'
+    }
+  },
+  form: {
+    screen: Form,
+    navigationOptions: {
+      ...defualtHeaderStyles,
+      title: 'Información de envío',
+      cardStyle: {
+        backgroundColor: Theme.colors.white
+      }
     }
   }
 },
