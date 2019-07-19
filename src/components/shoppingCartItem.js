@@ -7,6 +7,10 @@ import {
 import Quantity from 'react-native-numeric-input'
 import ShoppingCartHeader from '../components/shoppingCartHeader'
 import ShoppingCartPlusList from './ShoppingCartPlusList'
+import { addProductToCart } from '../ducks/shoppingCart'
+import { connect } from 'react-redux'
+
+const mapDispatchToProps = { addProductToCart }
 
 const Item = props => (
   <View style={styles.container}>
@@ -15,15 +19,25 @@ const Item = props => (
       name={props.product.name} />
     <View style={styles.descriptionContainer}>
       <Text style={styles.descriptionTitle}>
-        Acompañamientos
+        { !props.adds ? '' : 'Acompañamientos' }
       </Text>
-      <ShoppingCartPlusList list={props.product.adds} />
+      <ShoppingCartPlusList list={props.product.additionals} />
     </View>
     <View style={styles.containerButtons}>
-      <Quantity step={1} totalWidth={200} totalHeight={50} />
+      <Quantity
+        onChange={value => props.addProductToCart({ ...props.product, quantity: value }, 'single')}
+        step={1}
+        totalWidth={200}
+        totalHeight={50}
+        initValue={props.product.quantity}
+        minValue={0} />
     </View>
   </View>
 )
+
+Item.defaultProps = {
+  adds: []
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -46,4 +60,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Item
+export default connect(() => ({}), mapDispatchToProps)(Item)

@@ -10,11 +10,14 @@ import numeral from 'numeral'
 import Theme from '../Theme'
 import { connect } from 'react-redux'
 import { showModal } from '../ducks/modal'
+import { setProductToAdd } from '../ducks/products'
+
 const mapStateToProps = state => ({
   modal: { ...state.modal }
 })
 const mapDispatchToProps = {
-  showModal
+  showModal,
+  setProductToAdd
 }
 
 const ProductItem = props => {
@@ -24,6 +27,7 @@ const ProductItem = props => {
       image={image}
       name={name}
       ShowIcon
+      product={props.product}
     >
       <Text style={styles.productText}>
         { description }
@@ -32,7 +36,10 @@ const ProductItem = props => {
         <Text style={[styles.productText, styles.price]}>
           ${ numeral(price).format('0,0') }
         </Text>
-        <AddButton onPress={props.showModal} />
+        <AddButton onPress={() => {
+          props.setProductToAdd(props.product)
+          props.showModal()
+        }} />
       </View>
     </ProductCard>
   )

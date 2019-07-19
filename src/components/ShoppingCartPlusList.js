@@ -12,8 +12,8 @@ const ShoppingCartPlusList = props => (
     {props.list.map(add => (
       <View style={styles.plus}>
         <Icons name='plus-circle-outline' size={20} />
-        <Text style={styles.plusName} key={add}>
-          {add}
+        <Text style={styles.plusName} key={add.id}>
+          {add.name}
         </Text>
       </View>
     ))}

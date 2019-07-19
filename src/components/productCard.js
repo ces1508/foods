@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   View,
   Text,
@@ -8,27 +8,59 @@ import PropTypes from 'prop-types'
 import ProductImage from './ProductImage'
 import FavoriteIcon from './favoriteicon'
 import Theme from '../Theme'
+import { addToFavorites, removeFromFavorites } from '../ducks/favorites'
+import { connect } from 'react-redux'
 
-const ProductCard = props => (
-  <View style={styles.card}>
-    <ProductImage src={props.image} />
-    <View style={styles.cardContainer}>
-      <View style={styles.cardHeader}>
-        <Text style={[styles.productText, styles.productTitle]}>
-          { props.name }
-        </Text>
-        {
-          props.ShowIcon
-            ? <FavoriteIcon />
-            : null
-        }
+const mapStateToProsp = state => ({ favorites: state.favorites.favorites })
+const mapDispatchToprops = { addToFavorites, removeFromFavorites }
+
+class ProductCard extends Component {
+  state = {
+    isFavorite: -1
+  }
+  isFavorite () {
+    return this.props.favorites.findIndex(item => item.id === this.props.id)
+  }
+  static getDerivedStateFromProps(props, state) {
+    let indexFavorite = props.favorites.findIndex(item => item.id === props.product.id)
+    if (indexFavorite !== state.isFavorite) {
+      return {
+        isFavorite: indexFavorite
+      }
+    }
+    return null
+  }
+  handleFavorite () {
+    let { isFavorite } = this.state
+    console.log('is favorite', isFavorite)
+    if (isFavorite >= 0) {
+      return this.props.removeFromFavorites(isFavorite)
+    }
+    this.props.addToFavorites(this.props.product)
+  }
+  render () {
+    return (
+      <View style={styles.card}>
+        <ProductImage src={this.props.image} />
+        <View style={styles.cardContainer}>
+          <View style={styles.cardHeader}>
+            <Text numberOfLines={2} style={[styles.productText, styles.productTitle]}>
+              { this.props.name }
+            </Text>
+            {
+              this.props.ShowIcon
+                ? <FavoriteIcon isFavorite={this.state.isFavorite >= 0} onPress={() => this.handleFavorite()} />
+                : null
+            }
+          </View>
+          <View style={styles.cardBody}>
+            {this.props.children}
+          </View>
+        </View>
       </View>
-      <View style={styles.cardBody}>
-        {props.children}
-      </View>
-    </View>
-  </View>
-)
+    )
+  }
+}
 
 ProductCard.propTypes = {
   image: PropTypes.string.isRequired,
@@ -66,8 +98,9 @@ const styles = StyleSheet.create({
   productTitle: {
     fontWeight: 'bold',
     color: Theme.colors.title,
-    fontSize: 18
+    fontSize: 18,
+    marginRight: 50
   }
 })
 
-export default ProductCard
+export default connect(mapStateToProsp, mapDispatchToprops)(ProductCard)

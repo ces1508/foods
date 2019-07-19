@@ -5,6 +5,7 @@ import { StyleSheet } from 'react-native'
 
 const FavoriteIcon = props => (
   <Icon
+    {...props}
     style={[styles.favorite, props.isFavorite ? styles.isFavorite : {}]}
     name={props.isFavorite ? 'heart' : 'heart-outline'}
     size={25} />
@@ -21,7 +22,10 @@ FavoriteIcon.defaultProps = {
 const styles = StyleSheet.create({
   favorite: {
     marginRight: 5,
-    color: '#d1d1d1'
+    color: '#d1d1d1',
+    zIndex: 20,
+    position: 'absolute',
+    right: 2
   },
   isFavorite: {
     color: 'red'

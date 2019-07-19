@@ -4,14 +4,17 @@ import { View, Text, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 import Theme from '../Theme'
 
-const mapStateToProps = state => ({ shoppingCart: state.shoppingCart })
+const mapStateToProps = state => ({ products: state.shoppingCart.products })
 
-const CartIcon = props => (
-  <View style={styles.container}>
-    <Text style={styles.badge}>{props.shoppingCart.products}</Text>
-    <Icons onPress={() => props.navigation.navigate('shoppingCart')} style={styles.icon} name='cart-outline' size={35} />
-  </View>
-)
+const CartIcon = props => {
+  let amount = [...props.products].map(pairs => pairs[1]).reduce((prev, current) => (prev + current.quantity), 0)
+  return (
+    <View style={styles.container}>
+      <Text style={styles.badge}>{amount}</Text>
+      <Icons onPress={() => props.navigation.navigate('shoppingCart')} style={styles.icon} name='cart-outline' size={35} />
+    </View>
+  )
+}
 
 export default connect(mapStateToProps)(CartIcon)
 
