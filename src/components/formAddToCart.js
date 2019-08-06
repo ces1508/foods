@@ -3,7 +3,8 @@ import {
   View,
   Text,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  ScrollView
 } from 'react-native'
 import Theme from '../Theme'
 import Quantity from 'react-native-numeric-input'
@@ -26,8 +27,14 @@ class Form extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      addFeatures: false,
       quantity: 1,
       optionsSelected: [],
+      options: [
+        { name: 'agregar carne', price: 3000, id: '1' },
+        { name: 'cambio de pan por platano', price: 2000, id: '2' },
+        { name: 'adiccion de queso', price: 3000, id: '3' }
+      ],
       bread: this.props.currentProduct.breads.length > 0 ? this.props.currentProduct.breads[0] : ''
     }
     this._handeChange = this._handeChange.bind(this)
@@ -45,60 +52,19 @@ class Form extends React.Component {
     this.setState({ optionsSelected: value })
   }
   _handleSubmit () {
-    let { quantity, optionsSelected } = this.state
+    let { quantity, optionsSelected, bread } = this.state
     let { addProductToCart, hideModal, currentProduct } = this.props
-    let product = { ...currentProduct, quantity, additionals: optionsSelected }
+    let product = { ...currentProduct, quantity, bread, optionsSelected }
     addProductToCart(product)
     hideModal()
   }
   _renderOptions () {
-    // let { options } = this.props
-    let options = [
-      {
-        id: 1,
-        name: 'queso adicional',
-        price: 1000
-      },
-      {
-        id: 2,
-        name: 'carne adicional',
-        price: 2500
-      },
-      {
-        id: 3,
-        name: 'queso adicional',
-        price: 1000
-      },
-      {
-        id: 4,
-        name: 'carne adicional',
-        price: 2500
-      },
-      {
-        id: 5,
-        name: 'queso adicional',
-        price: 1000
-      },
-      {
-        id: 6,
-        name: 'carne adicional',
-        price: 2500
-      },
-      {
-        id: 7,
-        name: 'queso adicional',
-        price: 1000
-      },
-      {
-        id: 8,
-        name: 'carne adicional',
-        price: 2500
-      }
-    ]
-    if (options) {
-      return <ProductOptions options={options} onChange={this._onChangeOptions} />
-    }
-    return null
+    let { addFeatures, options } = this.state
+    return <ProductOptions
+      onCancel={() => this.setState({ addFeatures: false })}
+      show={addFeatures}
+      options={options}
+      onAgree={this._onChangeOptions} />
   }
   renderBreads () {
     if (this.props.currentProduct.breads.length > 0) {
@@ -125,6 +91,15 @@ class Form extends React.Component {
           <Quantity step={1} value={quantity} onChange={this._handeChange} />
         </View>
         {this.renderBreads()}
+        <Text style={styles.title} onPress={() => this.setState({ addFeatures: true })}>La quiero con :</Text>
+        <View style={styles.containerAdds}>
+          {this.state.optionsSelected.map(op => <Text key={op.id}>{op.name}</Text>)}
+        </View>
+        <Text style={styles.title}>La quiero sin </Text>
+        <View style={styles.containerAdds}>
+          {this.state.optionsSelected.map(op => <Text key={op.id}>{op.name}</Text>)}
+        </View>
+        {this._renderOptions()}
         <TouchableOpacity onPress={this._handleSubmit} style={styles.button}>
           <Text style={styles.buttonText}>Agregar</Text>
         </TouchableOpacity>
@@ -148,6 +123,9 @@ const styles = StyleSheet.create({
     color: Theme.colors.title,
     marginBottom: 15,
     textAlign: 'center'
+  },
+  containerAdds: {
+    paddingLeft: 15
   },
   quantity: {
     alignSelf: 'center',

@@ -9,15 +9,15 @@ export default function shoppingCartReduce (state = initialState, action) {
   switch (action.type) {
     case ADD_TO_SHOPPINCART:
       let alreadyInCart = state.products
-      let { product, addType } = action
+      let { product } = action
       if (product.quantity === 0) {
         alreadyInCart.delete(product.id)
       } else {
-        if (alreadyInCart.get(product.id) && addType === 'all') {
-          alreadyInCart.set(product.id, { ...product, quantity: alreadyInCart.get(product.id).quantity += product.quantity })
-        } else {
-          alreadyInCart.set(product.id, product)
-        }
+        // if (alreadyInCart.get(product.id) && addType === 'all') {
+        //   alreadyInCart.set(product.id, { ...product, quantity: alreadyInCart.get(product.id).quantity += product.quantity })
+        // } else {
+        alreadyInCart.set(product.id, product)
+        // }
       }
       return {
         ...state,

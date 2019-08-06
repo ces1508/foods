@@ -1,5 +1,6 @@
 import React from 'react'
-import { Text, FlatList } from 'react-native'
+import { TouchableOpacity, Text, FlatList } from 'react-native'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const ProductBreads = props => {
   return <FlatList
@@ -7,16 +8,24 @@ const ProductBreads = props => {
     data={props.breads}
     keyExtractor={item => item}
     numColumns={2}
-    renderItem={({ item }) => <Text
-      onPress={() => props.onPress(item)}
-      style={{
-        padding: 10,
-        margin: 10,
-        borderColor: props.bread === item ? 'green' : 'gray',
-        borderRadius: 10,
-        borderWidth: 1 }}>
-      {item}
-    </Text>}
+    renderItem={({ item }) => (
+      <TouchableOpacity
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: 10,
+          margin: 10,
+          borderColor: props.bread === item ? 'green' : 'gray',
+          borderRadius: 10,
+          borderWidth: props.bread === item ? 2 : 1 }}>
+        <Icon name='bread-slice-outline' size={28} />
+        <Text
+          onPress={() => props.onPress(item)}>
+          {item}
+        </Text>
+      </TouchableOpacity>
+    )}
   />
 }
 

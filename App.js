@@ -14,6 +14,7 @@ import Theme from './src/Theme'
 import { setShoppingCart } from './src/ducks/shoppingCart'
 import { loadMany as setManyFavorites } from './src/ducks/favorites'
 import { AsyncStorage, AppState } from 'react-native'
+import FlashMessage from 'react-native-flash-message'
 
 export default class App extends Component {
   constructor (props) {
@@ -50,6 +51,7 @@ export default class App extends Component {
     return (
       <Provider store={store} style={{ backgroundColor: Theme.colors.maingBgColor }}>
         <Navigation />
+        <FlashMessage position='top' animated duration={4500} />
       </Provider>
     )
   }

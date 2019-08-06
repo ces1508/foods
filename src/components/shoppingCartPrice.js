@@ -7,12 +7,15 @@ import Theme from '../Theme'
 const mapStateToProps = state => ({ products: state.shoppingCart.products })
 
 const ShoppingCartPrice = props => {
-  let price = [...props.products].map(item => item[1]).reduce((prev, current) => {
+  let price = [...props.products.values()].reduce((prev, current) => {
     let additionalsPrice = 0
-    if (current.additionals) {
+    let breadPrice = 0
+    if (current.additionals.length > 0) {
       additionalsPrice = current.additionals.reduce((prevAdd, currentAdd) => (prevAdd + currentAdd.price), 0)
     }
-    return prev + (current.price * current.quantity) + (additionalsPrice * current.quantity)
+    if (current.bread) breadPrice = current.bread.price
+    let priceByUnit = current.price + additionalsPrice + breadPrice
+    return prev + (priceByUnit * current.quantity)
   }, 0)
   return (
     <View style={styles.container}>

@@ -3,11 +3,13 @@ import {
   View,
   FlatList,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  StyleSheet
 } from 'react-native'
 import ShoppingCartItem from '../components/shoppingCartItem'
 import ShoppingCartPrice from '../components/shoppingCartPrice'
 import { connect } from 'react-redux'
+import Theme from '../Theme'
 
 const mapStateToProps = state => ({ products: state.shoppingCart.products })
 
@@ -22,8 +24,8 @@ class ShoppingCart extends PureComponent {
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => <ShoppingCartItem product={item} />}
         />
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('form')} style={{ height: 50, backgroundColor: 'yellow', width: '100%', zIndex: 10 }}>
-          <Text style={{ color: 'black', fontSize: 22, textAlign: 'center', textAlignVertical: 'center', height: '100%', fontWeight: 'bold' }}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('form')} style={styles.button}>
+          <Text style={styles.buttonText}>
             ORDENAR
           </Text>
         </TouchableOpacity>
@@ -33,3 +35,20 @@ class ShoppingCart extends PureComponent {
 }
 
 export default connect(mapStateToProps)(ShoppingCart)
+
+const styles = StyleSheet.create({
+  button: {
+    height: 50,
+    backgroundColor: Theme.colors.secondary,
+    width: '100%',
+    zIndex: 10
+  },
+  buttonText: {
+    color: Theme.colors.text.secundary,
+    fontSize: 22,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    height: '100%',
+    fontWeight: 'bold'
+  }
+})

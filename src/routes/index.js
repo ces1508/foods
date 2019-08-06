@@ -7,6 +7,7 @@ import ShoppingCartScreen from '../screens/shoppingCart'
 import Form from '../screens/form'
 import Theme from '../Theme'
 import FavoriteScreen from '../screens/favorites'
+import Product from '../screens/product'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const defualtHeaderStyles = {
@@ -33,16 +34,6 @@ const stack = createStackNavigator({
         ...defualtHeaderStyles,
         title: categoryName,
         headerRight: <CartIcon navigation={navigation} />
-      }
-    }
-  },
-  form: {
-    screen: Form,
-    navigationOptions: {
-      ...defualtHeaderStyles,
-      title: 'Información de envío',
-      cardStyle: {
-        backgroundColor: Theme.colors.white
       }
     }
   }
@@ -101,6 +92,22 @@ const appStack = createStackNavigator({
     navigationOptions: {
       ...defualtHeaderStyles,
       title: 'Carrito de compras'
+    }
+  },
+  product: {
+    screen: Product,
+    navigationOptions: {
+      header: null
+    }
+  },
+  form: {
+    screen: Form,
+    navigationOptions: {
+      ...defualtHeaderStyles,
+      title: 'Información de envío',
+      cardStyle: {
+        backgroundColor: Theme.colors.white
+      }
     }
   }
 }, {

@@ -5,20 +5,58 @@ export default {
       'name': 'Hamburgesas',
       image: 'https://drive.google.com/uc?id=1nLFKib_0fMCpt-1wl11WFbG3NMVEmy1p',
       breads: [
-        'Orégano',
-        'Arabe',
-        'Semillas de sesamo',
-        'Maíz'
+        { id: 'bread__001', name: 'Orégano', price: 0, type: 'bread' },
+        { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
+        { id: 'bread__003', name: 'Semillas de sesamo', price: 0, type: 'bread' },
+        { id: 'bread__004', name: 'Maíz', price: 0, type: 'bread' },
+        { id: 'bread__005', name: 'Patacon', price: 3000, type: 'bread' }
+      ],
+      without: [
+        { id: 'wout__001', name: 'Lechuga', price: 0, type: 'remove' },
+        { id: 'wout__002', name: 'Salsas', price: 0, type: 'remove' },
+        { id: 'wout__003', name: 'Cebolla', price: 0, type: 'remove' }
+      ],
+      additionals: [
+        { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 2500, type: 'add' },
+        { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 2500, type: 'add' },
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 2500, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2500, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 2500, type: 'add' },
+        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 2500, type: 'add' },
+        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2500, type: 'add' },
+        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 2500, type: 'add' },
+        { id: 'add__009', name: 'ADICIÓN DE SALSAS', price: 2500, type: 'add' },
+        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 2500, type: 'add' },
+        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2500, type: 'add' },
+        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2500, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 2500, type: 'add' },
+        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' }
       ]
     },
     {
       id: '2',
       'name': 'Perros Calientes',
       image: 'https://drive.google.com/uc?id=1T8lJk5fkF-Nb3lYAcCZNKn6yooCzolB0',
+      additionals: [
+        { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 2500, type: 'add' },
+        { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 2500, type: 'add' },
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 2500, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2500, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 2500, type: 'add' },
+        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 2500, type: 'add' },
+        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2500, type: 'add' },
+        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 2500, type: 'add' },
+        { id: 'add__009', name: 'ADICIÓN DE SALSAS', price: 2500, type: 'add' },
+        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 2500, type: 'add' },
+        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2500, type: 'add' },
+        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2500, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 2500, type: 'add' },
+        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' }
+      ],
       breads: [
-        'Arabe',
-        'Semillas de sesamo',
-        'Orégano'
+        { id: 'bread__001', name: 'Orégano', price: 0, type: 'bread' },
+        { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
+        { id: 'bread__003', name: 'Semillas de sesamo', price: 0, type: 'bread' }
       ]
     },
     {
@@ -74,14 +112,14 @@ export default {
     {
       id: '8',
       name: 'Cervezas Artesanales',
-      images: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
+      image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
     }
   ],
   products: [
     {
       categoryId: '1',
       id: '001',
-      name: 'HANBURGUESA SÚPER SÉSAMO',
+      name: 'HAMBURGUESA SÚPER SÉSAMO',
       price: 9500,
       description: 'Carne, queso crema, huevo, pan, tomate, lechuga, cebolla salteada, tocineta y salas Sésamo',
       image: 'https://drive.google.com/uc?id=1LNeRCvz8UltnxmUhhqmr_Ana_qGUr46S'

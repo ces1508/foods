@@ -6,6 +6,7 @@ import {
   Text,
   StyleSheet
 } from 'react-native'
+import Theme from '../Theme'
 
 const ShoppingCartItemHeader = props => (
   <ImageBackground
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     textAlign: 'center',
-    color: 'yellow',
+    color: Theme.colors.text.yellow,
     fontWeight: 'bold'
   }
 })

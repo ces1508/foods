@@ -9,8 +9,14 @@ import {
   Keyboard
 } from 'react-native'
 import Select from '../components/select'
+import Theme from '../Theme'
+import { showMessage } from 'react-native-flash-message'
+import { setShoppingCart } from '../ducks/shoppingCart'
+import { connect } from 'react-redux'
 
-export default class Form extends Component {
+const mapDispatchTopProps = { setShoppingCart }
+
+class Form extends Component {
   constructor (props) {
     super(props)
     // this.placesRef = React.createRef()
@@ -19,13 +25,16 @@ export default class Form extends Component {
     this.keyboardShowListener = null
     this._onKeyboardHide = this._onKeyboardHide.bind(this)
     this._onKeyboardShow = this._onKeyboardShow.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
+      observations: '',
       showButton: true,
       name: '',
-      addres: '',
+      address: '',
       barrio: '',
       city: '',
       local: '',
+      phone: '',
       cities: [
         {
           label: 'Neiva',
@@ -36,16 +45,7 @@ export default class Form extends Component {
           value: 'garzon'
         }
       ],
-      selectedCity: 'neiva',
-      places1: [
-        { label: 'Place 1', value: '1', key: '1' },
-        { label: 'Place 2', value: '2', key: '2' },
-        { label: 'Place 3', value: '3', key: '3' }
-      ],
-      places2: [
-        { label: 'Place 4', value: '4', key: '4' }
-      ],
-      selectedPlace: ''
+      selectedCity: 'neiva'
     }
   }
   componentDidMount () {
@@ -62,23 +62,28 @@ export default class Form extends Component {
   _onKeyboardHide () {
     this.setState({ showButton: true })
   }
-  renderPlaces () {
-    if (this.state.selectedCity) {
-      let places = this.state.selectedCity === 'neiva' ? this.state.places1 : this.state.places2
-      return (
-        <Select
-          style={styles.inputContainer}
-          label='Seleciona la tienda mas cercana'
-          options={places}
-          handleChange={value => this.setState({ selectedPlace: value })}
-          value={this.state.selectedPlace}
-        />
-      )
+  handleSubmit () {
+    let { name, phone, barrio, address } = this.state
+    if (!name || !phone || !barrio || !address) {
+      return showMessage({
+        type: 'warning',
+        icon: 'auto',
+        message: 'Por favor completa todos los campos'
+      })
     }
+    let message = {
+      icon: 'auto',
+      type: 'success',
+      hideStatusBar: true,
+      message: `Tù pedido se ha procesado con èxito`
+    }
+    showMessage(message)
+    this.props.setShoppingCart([])
+    this.props.navigation.navigate('tab')
   }
   render () {
     return (
-      <KeyboardAvoidingView style={styles.container} behavior='height' enabled>
+      <KeyboardAvoidingView style={styles.container} behavior='padding' enabled>
         <ScrollView>
           <View style={styles.inputContainer}>
             <Text>Nombre:</Text>
@@ -102,9 +107,19 @@ export default class Form extends Component {
             <Text>direción:</Text>
             <TextInput
               allowFontScaling
-              value={this.state.addres}
+              value={this.state.address}
               placeholder='direción donde se recibira el pedido'
               onChangeText={text => this.setState({ address: text })}
+            />
+          </View>
+          <View style={styles.inputContainer}>
+            <Text>Telefono:</Text>
+            <TextInput
+              keyboardType='phone-pad'
+              allowFontScaling
+              value={this.state.phone}
+              placeholder='Número de telefono'
+              onChangeText={text => this.setState({ phone: text })}
             />
           </View>
           <Select
@@ -117,27 +132,35 @@ export default class Form extends Component {
               this.setState({ selectedCity: value })
             }}
           />
-          {this.renderPlaces()}
+          <View style={styles.inputContainer}>
+            <Text>Observaciones:</Text>
+            <TextInput
+              multiline
+              value={this.state.observations}
+              label='Observaciones'
+              onChangeText={observations => this.setState({ observations })}
+            />
+          </View>
+          {
+            this.state.showButton
+              ? <View style={styles.button}>
+                <Text style={styles.buttonText} onPress={this.handleSubmit}>
+                  ORDENAR
+                </Text>
+              </View>
+              : null
+          }
         </ScrollView>
-        {
-          this.state.showButton
-            ? <View style={{ height: 50, backgroundColor: 'yellow', width: '100%', zIndex: 10 }}>
-              <Text style={{ color: 'black', fontSize: 22, textAlign: 'center', textAlignVertical: 'center', height: '100%', fontWeight: 'bold' }}>
-                ORDENAR
-              </Text>
-            </View>
-            : null
-        }
       </KeyboardAvoidingView>
     )
   }
 }
 
+export default connect(() => ({}), mapDispatchTopProps)(Form)
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    flexDirection: 'column',
-    flex: 1
+    flexDirection: 'column'
   },
   inputContainer: {
     backgroundColor: 'white',
@@ -145,5 +168,19 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     paddingHorizontal: 5
+  },
+  button: {
+    height: 50,
+    backgroundColor: Theme.colors.secondary,
+    width: '100%',
+    zIndex: 10
+  },
+  buttonText: {
+    color: Theme.colors.text.secundary,
+    fontSize: 22,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    height: '100%',
+    fontWeight: 'bold'
   }
 })

@@ -6,13 +6,14 @@ import {
   StyleSheet
 } from 'react-native'
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
+import uuid from 'uuid/v1'
 
-const ShoppingCartPlusList = props => (
+const ShoppingCartItemOptionsList = props => (
   <View style={styles.conatinerPlus}>
     {props.list.map(add => (
       <View style={styles.plus}>
-        <Icons name='plus-circle-outline' size={20} />
-        <Text style={styles.plusName} key={add.id}>
+        <Icons name={props.icon} size={20} />
+        <Text style={styles.plusName} key={uuid()}>
           {add.name}
         </Text>
       </View>
@@ -20,8 +21,13 @@ const ShoppingCartPlusList = props => (
   </View>
 )
 
-ShoppingCartPlusList.propTypes = {
-  list: PropTypes.array.isRequired
+ShoppingCartItemOptionsList.propTypes = {
+  list: PropTypes.array.isRequired,
+  icon: PropTypes.string.isRequired
+}
+
+ShoppingCartItemOptionsList.defaultProps = {
+  icon: 'plus-circle-outline'
 }
 
 const styles = StyleSheet.create({
@@ -43,4 +49,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ShoppingCartPlusList
+export default ShoppingCartItemOptionsList

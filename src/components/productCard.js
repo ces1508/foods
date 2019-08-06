@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {
+  TouchableOpacity,
   View,
   Text,
   StyleSheet
@@ -32,7 +33,6 @@ class ProductCard extends Component {
   }
   handleFavorite () {
     let { isFavorite } = this.state
-    console.log('is favorite', isFavorite)
     if (isFavorite >= 0) {
       return this.props.removeFromFavorites(isFavorite)
     }
@@ -40,7 +40,7 @@ class ProductCard extends Component {
   }
   render () {
     return (
-      <View style={styles.card}>
+      <TouchableOpacity  onPress={this.props.onPress} style={styles.card}>
         <ProductImage src={this.props.image} />
         <View style={styles.cardContainer}>
           <View style={styles.cardHeader}>
@@ -57,7 +57,7 @@ class ProductCard extends Component {
             {this.props.children}
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     )
   }
 }

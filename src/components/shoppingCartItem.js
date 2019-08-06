@@ -6,9 +6,10 @@ import {
 } from 'react-native'
 import Quantity from 'react-native-numeric-input'
 import ShoppingCartHeader from '../components/shoppingCartHeader'
-import ShoppingCartPlusList from './ShoppingCartPlusList'
+import ShoppingCarItemOptions from './ShoppingCarItemOptions'
 import { addProductToCart } from '../ducks/shoppingCart'
 import { connect } from 'react-redux'
+import Theme from '../Theme'
 
 const mapDispatchToProps = { addProductToCart }
 
@@ -19,9 +20,14 @@ const Item = props => (
       name={props.product.name} />
     <View style={styles.descriptionContainer}>
       <Text style={styles.descriptionTitle}>
-        { !props.adds ? '' : 'Acompañamientos' }
+        Descripción:
       </Text>
-      <ShoppingCartPlusList list={props.product.additionals} />
+      {props.product.bread
+        ? <Text style={styles.bread}> Pan: {props.product.bread.name} </Text>
+        : null
+      }
+      <ShoppingCarItemOptions list={props.product.additionals} />
+      <ShoppingCarItemOptions icon='minus-circle-outline' list={props.product.removes} />
     </View>
     <View style={styles.containerButtons}>
       <Quantity
@@ -42,7 +48,7 @@ Item.defaultProps = {
 const styles = StyleSheet.create({
   container: {
     overflow: 'hidden',
-    backgroundColor: 'white',
+    backgroundColor: Theme.colors.white,
     paddingBottom: 15,
     marginBottom: 20,
     borderRadius: 10,
@@ -57,6 +63,11 @@ const styles = StyleSheet.create({
   containerButtons: {
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  bread: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginVertical: 8
   }
 })
 

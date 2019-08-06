@@ -35,7 +35,12 @@ class ProductsScreen extends Component {
           keyExtractor={item => item.id.toString()}
           data={this.props.products.products}
           renderItem={({ item }) => <ProductITem
-            product={{ ...item, breads: category.breads || [] }}
+            product={{
+              ...item,
+              breads: category.breads || [],
+              additionals: category.additionals || [],
+              without: category.without || []
+            }}
             navigation={this.props.navigation} />}
         />
       </View>

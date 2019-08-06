@@ -14,8 +14,8 @@ const mapDispatchToProps = {
 const ModalWrapper = props => {
   return (
     <Modal style={styles.modal} {...props}>
+      <Icons name='times-circle' size={50} style={styles.close} onPress={() => props.hideModal()} />
       <View style={styles.modal}>
-        <Icons name='times-circle' size={50} style={styles.close} onPress={() => props.hideModal()} />
         {props.children}
       </View>
     </Modal>
@@ -27,15 +27,18 @@ export default connect(mapStateToProps, mapDispatchToProps)(ModalWrapper)
 const styles = StyleSheet.create({
   modal: {
     flex: 1,
+    zIndex: 5,
     height: '100%',
     backgroundColor: 'rgba(0, 0, 0, .8)',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    position: 'relative'
   },
   close: {
     position: 'absolute',
     right: 0,
     top: 0,
+    zIndex: 10,
     color: Theme.colors.white
   }
 })

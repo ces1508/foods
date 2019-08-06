@@ -22,8 +22,10 @@ const mapDispatchToProps = {
 
 const ProductItem = props => {
   let { image, name, description, price } = props.product
+  let handlePress = () => props.navigation.navigate('product', { product: props.product })
   return (
     <ProductCard
+      onPress={handlePress}
       image={image}
       name={name}
       ShowIcon
@@ -36,10 +38,7 @@ const ProductItem = props => {
         <Text style={[styles.productText, styles.price]}>
           ${ numeral(price).format('0,0') }
         </Text>
-        <AddButton onPress={() => {
-          props.setProductToAdd(props.product)
-          props.showModal()
-        }} />
+        <AddButton onPress={handlePress} />
       </View>
     </ProductCard>
   )
