@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
     color: Theme.colors.text.yellow,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

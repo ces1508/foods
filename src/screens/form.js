@@ -86,7 +86,7 @@ class Form extends Component {
       <KeyboardAvoidingView style={styles.container} behavior='padding' enabled>
         <ScrollView>
           <View style={styles.inputContainer}>
-            <Text>Nombre:</Text>
+            <Text style={styles.text}>Nombre:</Text>
             <TextInput
               allowFontScaling
               value={this.state.name}
@@ -95,7 +95,7 @@ class Form extends Component {
             />
           </View>
           <View style={styles.inputContainer}>
-            <Text>Barrio:</Text>
+            <Text style={styles.text}>Barrio:</Text>
             <TextInput
               allowFontScaling
               value={this.state.barrio}
@@ -104,7 +104,7 @@ class Form extends Component {
             />
           </View>
           <View style={styles.inputContainer}>
-            <Text>direción:</Text>
+            <Text style={styles.text}>direción:</Text>
             <TextInput
               allowFontScaling
               value={this.state.address}
@@ -113,7 +113,7 @@ class Form extends Component {
             />
           </View>
           <View style={styles.inputContainer}>
-            <Text>Telefono:</Text>
+            <Text style={styles.text}>Telefono:</Text>
             <TextInput
               keyboardType='phone-pad'
               allowFontScaling
@@ -133,7 +133,7 @@ class Form extends Component {
             }}
           />
           <View style={styles.inputContainer}>
-            <Text>Observaciones:</Text>
+            <Text style={styles.text}>Observaciones:</Text>
             <TextInput
               multiline
               value={this.state.observations}
@@ -175,7 +175,11 @@ const styles = StyleSheet.create({
     width: '100%',
     zIndex: 10
   },
+  text: {
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+  },
   buttonText: {
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
     color: Theme.colors.text.secundary,
     fontSize: 22,
     textAlign: 'center',

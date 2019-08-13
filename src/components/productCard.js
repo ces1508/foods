@@ -96,10 +96,12 @@ const styles = StyleSheet.create({
     flex: 1
   },
   productTitle: {
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     color: Theme.colors.title,
     fontSize: 18,
-    marginRight: 50
+    marginRight: 50,
+    // fontFamily: 'UNIVERSAL-SCRIPT-PERSONAL-USE'
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

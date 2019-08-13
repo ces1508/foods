@@ -43,8 +43,8 @@ export default class ProductOptions extends Component {
         style={styles.addition}>
         {this.state.selected.get(item.id) ? <Icons name='check' size={30} color='green' /> : null}
         <View style={{ marginRight: 10 }}>
-          <Text style={{ textAlign: 'center', color: '#000' }}>{item.name}</Text>
-          <Text style={{ color: '#000' }}>valor: ${item.price}</Text>
+          <Text style={[{ textAlign: 'center' }, styles.text]}>{item.name}</Text>
+          <Text style={styles.text}>valor: ${item.price}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -81,6 +81,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
+  text: {
+    color: '#fff',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+  },  
   addition: {
     flexDirection: 'row',
     padding: 10,
@@ -97,6 +101,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textAlignVertical: 'center',
     borderRadius: 5,
-    borderWidth: 1
+    borderWidth: 1,
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })

@@ -9,7 +9,7 @@ export default {
         { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
         { id: 'bread__003', name: 'Semillas de sesamo', price: 0, type: 'bread' },
         { id: 'bread__004', name: 'Maíz', price: 0, type: 'bread' },
-        { id: 'bread__005', name: 'Patacon', price: 3000, type: 'bread' }
+        { id: 'bread__005', name: 'Patacon', price: 2500, type: 'bread' }
       ],
       without: [
         { id: 'wout__001', name: 'Lechuga', price: 0, type: 'remove' },
@@ -30,13 +30,43 @@ export default {
         { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2500, type: 'add' },
         { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2500, type: 'add' },
         { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 2500, type: 'add' },
-        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' }
+        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' },
+        { id: 'add__015', name: 'SALSA BBQ', price: 1000, type: 'add' },
+        { id: 'add__016', name: 'SALSA SESAMO', price: 1000, type: 'add' }
       ]
     },
     {
       id: '2',
       'name': 'Perros Calientes',
       image: 'https://drive.google.com/uc?id=1T8lJk5fkF-Nb3lYAcCZNKn6yooCzolB0',
+      additionals: [
+        { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 2500, type: 'add' },
+        { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 2500, type: 'add' },
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 2500, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2500, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 2500, type: 'add' },
+        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 2500, type: 'add' },
+        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2500, type: 'add' },
+        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 2500, type: 'add' },
+        { id: 'add__009', name: 'ADICIÓN DE SALSAS', price: 2500, type: 'add' },
+        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 2500, type: 'add' },
+        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2500, type: 'add' },
+        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2500, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 2500, type: 'add' },
+        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' },
+        { id: 'add__015', name: 'SALSA BBQ', price: 1000, type: 'add' },
+        { id: 'add__016', name: 'SALSA SESAMO', price: 1000, type: 'add' }
+      ],
+      breads: [
+        { id: 'bread__001', name: 'Orégano', price: 0, type: 'bread' },
+        { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
+        { id: 'bread__003', name: 'Semillas de sesamo', price: 0, type: 'bread' }
+      ]
+    },
+    {
+      id: '3',
+      'name': 'Sandwiches',
+      image: 'https://drive.google.com/uc?id=1ynXIXyMiaWmgT7F79RY_Fxh9v7_Zu5U2',
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 2500, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 2500, type: 'add' },
@@ -58,11 +88,7 @@ export default {
         { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
         { id: 'bread__003', name: 'Semillas de sesamo', price: 0, type: 'bread' }
       ]
-    },
-    {
-      id: '3',
-      'name': 'Sandwiches',
-      image: 'https://drive.google.com/uc?id=1ynXIXyMiaWmgT7F79RY_Fxh9v7_Zu5U2'
+      
     },
     // {
     //   id: '10',
@@ -87,7 +113,14 @@ export default {
     {
       id: '13',
       name: 'Jugos Naturales',
-      image: 'https://drive.google.com/uc?id=1CMqukjVVVVAQFixleKlTBfTmxGeusJi_'
+      image: 'https://drive.google.com/uc?id=1CMqukjVVVVAQFixleKlTBfTmxGeusJi_',
+      additionals: [
+        { id: 'wout__001', name: 'bajo en azucar', price: 0, type: 'remove' }
+      ],
+      without: [
+        { id: 'wout__002', name: 'sin azucar', price: 0, type: 'remove' },
+        { id: 'wout__003', name: 'sin hielo', price: 0, type: 'remove' }
+      ]
     },
     {
       id: '14',

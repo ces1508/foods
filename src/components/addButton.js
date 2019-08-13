@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderBottomLeftRadius: 20,
     borderTopRightRadius: 20,
-    borderBottomRightRadius: 20
+    borderBottomRightRadius: 20,
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

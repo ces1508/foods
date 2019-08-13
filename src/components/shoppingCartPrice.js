@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
   text: {
     color: Theme.colors.white,
     fontSize: 25,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

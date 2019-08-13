@@ -15,9 +15,15 @@ class FavoritesScreen extends PureComponent {
       <FlatList
         style={{ flex: 1, backgroundColor: Theme.colors.maingBgColor, paddingTop: 10 }}
         keyExtractor={item => item.id.toString()}
-        ListEmptyComponent={() => <View style={{ flex: 1, height: height - 50, justifyContent: 'center', alignItems: 'center' }}>
+        ListEmptyComponent={() => <View 
+          style={{ flex: 1, height: height - 50, justifyContent: 'center', alignItems: 'center' }}>
           <Icon name='emoticon-sad-outline' size={100} color='#fff' />
-          <Text style={{ color: '#fff', fontSize: 20 }}>Aún no tienes ningun favorito</Text>
+          <Text 
+            numberOfLines={2}
+            style={{
+              fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+              color: '#fff', 
+              fontSize: 20 }}>Aún no tienes ningun favorito</Text>
         </View>}
         data={this.props.favorites}
         renderItem={({ item }) => <Product product={item} navigation={this.props.navigation} />}

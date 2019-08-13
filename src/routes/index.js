@@ -12,6 +12,10 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const defualtHeaderStyles = {
   headerTintColor: Theme.colors.secondary,
+  headerTitleStyle: {
+    fontWeight: 'normal',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+  },
   headerStyle: {
     backgroundColor: Theme.colors.maingBgColor
   }
@@ -74,6 +78,8 @@ const TabStack = createBottomTabNavigator({
     activeTintColor: Theme.colors.secondary,
     inactiveTintColor: Theme.colors.white,
     labelStyle: {
+      fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+      fontWeight: 'normal',
       fontSize: 15
     },
     style: { backgroundColor: Theme.colors.maingBgColor }

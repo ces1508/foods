@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
   },
   plusName: {
     textAlign: 'center',
-    marginLeft: 10
+    marginLeft: 10,
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textAlignVertical: 'center',
     height: '100%',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
   }
 })

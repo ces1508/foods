@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     paddingVertical: 10
   },
   descriptionTitle: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   },
   containerButtons: {
     justifyContent: 'center',
@@ -67,7 +68,8 @@ const styles = StyleSheet.create({
   bread: {
     fontSize: 18,
     textAlign: 'center',
-    marginVertical: 8
+    marginVertical: 8,
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

@@ -136,9 +136,10 @@ class Product extends Component {
       additionals: listOfSelected.filter(item => item.type === 'add')
     })
     let message = {
-      type: 'default',
-      backgroundColor: Theme.colors.maingBgColor,
-      color: Theme.colors.white,
+      type: 'success',
+      icon: 'success',
+      // backgroundColor: Theme.colors.maingBgColor,
+      // color: Theme.colors.white,
       hideStatusBar: true,
       message: `Se ha agregado ${product.name} x ${quantity} al carro de compras`
     }
@@ -213,7 +214,8 @@ const styles = StyleSheet.create({
   barTitle: {
     fontSize: 18,
     flex: 1,
-    color: '#fff'
+    color: '#fff',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   container: {
     flex: 1
@@ -224,13 +226,16 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 18,
-    color: '#fff'
+    color: '#fff',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   sectionTitle: {
     padding: 10,
     flex: 1,
+    fontSize: 22,
     backgroundColor: '#d4d4d4',
-    color: '#000'
+    color: '#000',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   list: {
     flex: 1
@@ -262,7 +267,8 @@ const styles = StyleSheet.create({
   },
   itemTitle: {
     marginHorizontal: 8,
-    flex: 1
+    flex: 1,
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   actionContainer: {
     paddingVertical: 5,
@@ -283,6 +289,7 @@ const styles = StyleSheet.create({
     borderColor: Theme.colors.secondary,
     color: Theme.colors.maingBgColor,
     fontWeight: 'bold',
-    backgroundColor: Theme.colors.secondary
+    backgroundColor: Theme.colors.secondary,
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
   }
 })

@@ -48,7 +48,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(ProductItem)
 
 const styles = StyleSheet.create({
   productText: {
-    fontSize: 15
+    fontSize: 15,
+    fontFamily: 'UNIVERSAL-SCRIPT-PERSONAL-USE'
   },
   price: {
     color: Theme.colors.title,

@@ -122,7 +122,8 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: Theme.colors.title,
     marginBottom: 15,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
   },
   containerAdds: {
     paddingLeft: 15
@@ -140,6 +141,7 @@ const styles = StyleSheet.create({
     backgroundColor: Theme.colors.maingBgColor
   },
   buttonText: {
+    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
     color: Theme.colors.secondary
   }
 })
