@@ -8,22 +8,27 @@ import {
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
 import uuid from 'uuid/v1'
 
-const ShoppingCartItemOptionsList = props => (
-  <View style={styles.conatinerPlus}>
-    {props.list.map(add => (
-      <View style={styles.plus}>
-        <Icons name={props.icon} size={20} />
-        <Text style={styles.plusName} key={uuid()}>
-          {add.name}
-        </Text>
+const ShoppingCartItemOptionsList = props => {
+  if (Array.isArray(props.list)) {
+    return (
+      <View style={styles.conatinerPlus}>
+        {props.list.map(add => (
+          <View style={styles.plus}>
+            <Icons name={props.icon} size={20} />
+            <Text style={styles.plusName} key={uuid()}>
+              {add.name}
+            </Text>
+          </View>
+        ))}
       </View>
-    ))}
-  </View>
-)
+    )
+  }
+  return null
+}
 
 ShoppingCartItemOptionsList.propTypes = {
-  list: PropTypes.array.isRequired,
-  icon: PropTypes.string.isRequired
+  list: PropTypes.array,
+  icon: PropTypes.string
 }
 
 ShoppingCartItemOptionsList.defaultProps = {

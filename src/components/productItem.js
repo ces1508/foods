@@ -22,7 +22,18 @@ const mapDispatchToProps = {
 
 const ProductItem = props => {
   let { image, name, description, price } = props.product
-  let handlePress = () => props.navigation.navigate('product', { product: props.product })
+  let handlePress = () => {
+    console.log(props.product)
+    if (props.product.additionals.length > 0
+    || props.product.breads.length > 0
+    || props.product.without.length > 0) {
+      props.navigation.navigate('product', { product: props.product })
+    } else {
+      console.log('products', props.product)
+      props.showModal()
+      props.setProductToAdd(props.product)
+    }
+  }
   return (
     <ProductCard
       onPress={handlePress}
