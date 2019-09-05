@@ -26,7 +26,7 @@ class ShoppingCart extends PureComponent {
         />
         <TouchableOpacity onPress={() => this.props.navigation.navigate('form')} style={styles.button}>
           <Text style={styles.buttonText}>
-            ORDENAR
+            COMPRAR
           </Text>
         </TouchableOpacity>
       </View>

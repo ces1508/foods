@@ -21,7 +21,7 @@ export default {
         { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
         { id: 'bread__003', name: 'Semillas de sesamo', price: 0, type: 'bread' },
         { id: 'bread__004', name: 'Maíz', price: 0, type: 'bread' },
-        { id: 'bread__005', name: 'Patacon', price: 2500, type: 'bread' }
+        { id: 'bread__005', name: 'Patacon', price: 2000, type: 'bread' }
       ],
       without: [
         { id: 'wout__001', name: 'Lechuga', price: 0, type: 'remove' },
@@ -32,20 +32,20 @@ export default {
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
-        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 3000, type: 'add' },
-        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 3000, type: 'add' },
-        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 3000, type: 'add' },
-        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 3000, type: 'add' },
-        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 3000, type: 'add' },
-        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 2500, type: 'add' },
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2000, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
+        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 5000, type: 'add' },
+        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2000, type: 'add' },
+        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 1000, type: 'add' },
         { id: 'add__009', name: 'ADICIÓN DE SALSAS', price: 2500, type: 'add' },
-        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 2500, type: 'add' },
-        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2500, type: 'add' },
-        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2500, type: 'add' },
-        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 2500, type: 'add' },
-        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' },
-        { id: 'add__015', name: 'SALSA BBQ', price: 1000, type: 'add' },
-        { id: 'add__016', name: 'SALSA SESAMO', price: 1000, type: 'add' }
+        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 1000, type: 'add' },
+        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2000, type: 'add' },
+        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2000, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 3000, type: 'add' },
+        // { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2000, type: 'add' },
+        { id: 'add__015', name: 'SALSA BBQ', price: 500, type: 'add' },
+        { id: 'add__016', name: 'SALSA SESAMO', price: 500, type: 'add' }
       ]
     },
     {
@@ -55,26 +55,27 @@ export default {
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
-        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 3000, type: 'add' },
-        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 3000, type: 'add' },
-        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 3000, type: 'add' },
-        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 3000, type: 'add' },
-        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 3000, type: 'add' },
-        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 2500, type: 'add' },
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2000, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
+        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 5000, type: 'add' },
+        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2000, type: 'add' },
+        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 1000, type: 'add' },
         { id: 'add__009', name: 'ADICIÓN DE SALSAS', price: 2500, type: 'add' },
-        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 2500, type: 'add' },
-        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2500, type: 'add' },
-        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2500, type: 'add' },
-        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 2500, type: 'add' },
-        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' },
-        { id: 'add__015', name: 'SALSA BBQ', price: 1000, type: 'add' },
-        { id: 'add__016', name: 'SALSA SESAMO', price: 1000, type: 'add' }
+        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 1000, type: 'add' },
+        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2000, type: 'add' },
+        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2000, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 3000, type: 'add' },
+        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2000, type: 'add' },
+        { id: 'add__015', name: 'SALSA BBQ', price: 500, type: 'add' },
+        { id: 'add__016', name: 'SALSA SESAMO', price: 500, type: 'add' }
       ],
       without: [
-        { id: 'wout__001', name: 'Lechuga', price: 0, type: 'remove' },
+        // { id: 'wout__001', name: 'Lechuga', price: 0, type: 'remove' },
         { id: 'wout__002', name: 'Salsas', price: 0, type: 'remove' },
-        { id: 'wout__003', name: 'Cebolla', price: 0, type: 'remove' },
-        { id: 'wout__004', name: 'Tomate', price: 0, type: 'remove' }
+        // { id: 'wout__003', name: 'Cebolla', price: 0, type: 'remove' },
+        // { id: 'wout__004', name: 'Tomate', price: 0, type: 'remove' }
+        { id: 'wout__005', name: 'Papa ripio', price: 0, type: 'remove' },
       ],
       breads: [
         { id: 'bread__001', name: 'Orégano', price: 0, type: 'bread' },
@@ -89,20 +90,20 @@ export default {
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
-        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 3000, type: 'add' },
-        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 3000, type: 'add' },
-        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 3000, type: 'add' },
-        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 3000, type: 'add' },
-        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 3000, type: 'add' },
-        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 2500, type: 'add' },
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2000, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
+        { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 5000, type: 'add' },
+        { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2000, type: 'add' },
+        { id: 'add__008', name: 'ADICIÓN DE HUEVO FRITO', price: 1000, type: 'add' },
         { id: 'add__009', name: 'ADICIÓN DE SALSAS', price: 2500, type: 'add' },
-        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 2500, type: 'add' },
-        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2500, type: 'add' },
-        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2500, type: 'add' },
-        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 2500, type: 'add' },
-        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2500, type: 'add' },
-        { id: 'add__015', name: 'SALSA BBQ', price: 1000, type: 'add' },
-        { id: 'add__016', name: 'SALSA SESAMO', price: 1000, type: 'add' }
+        { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 1000, type: 'add' },
+        { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2000, type: 'add' },
+        { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2000, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 3000, type: 'add' },
+        { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2000, type: 'add' },
+        { id: 'add__015', name: 'SALSA BBQ', price: 500, type: 'add' },
+        { id: 'add__016', name: 'SALSA SESAMO', price: 500, type: 'add' }
       ],
       without: [
         { id: 'wout__001', name: 'Lechuga', price: 0, type: 'remove' },
@@ -115,7 +116,7 @@ export default {
         { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
         { id: 'bread__003', name: 'Semillas de sesamo', price: 0, type: 'bread' }
       ]
-      
+
     },
     // {
     //   id: '10',
@@ -284,7 +285,7 @@ export default {
       categoryId: '5',
       id: '201',
       name: 'GASEOSA COCACOLA ORIGINAL PERSONAL',
-      price: 2500,
+      price: 3000,
       description: '',
       image: 'https://drive.google.com/uc?id=1a1slbP_scP-sDx_e29d9UXdgpqdLq9bJ'
     },
@@ -292,7 +293,7 @@ export default {
       categoryId: '5',
       id: '202',
       name: 'GASEOSA COCACOLA CERO PERSONAL',
-      price: 2500,
+      price: 3000,
       description: '',
       image: 'https://drive.google.com/uc?id=1a1slbP_scP-sDx_e29d9UXdgpqdLq9bJ'
     },
@@ -300,7 +301,7 @@ export default {
       categoryId: '5',
       id: '203',
       name: 'GASEOSA SPRITE PERSONAL',
-      price: 2500,
+      price: 3000,
       description: '',
       image: 'https://drive.google.com/uc?id=1a1slbP_scP-sDx_e29d9UXdgpqdLq9bJ'
     },
@@ -308,7 +309,7 @@ export default {
       categoryId: '5',
       id: '204',
       name: 'GASEOSA QUATRO PERSONAL',
-      price: 2500,
+      price: 3000,
       description: '',
       image: 'https://drive.google.com/uc?id=1a1slbP_scP-sDx_e29d9UXdgpqdLq9bJ'
     },
@@ -316,7 +317,7 @@ export default {
       categoryId: '5',
       id: '205',
       name: 'GASEOSA GINGER PERSONAL',
-      price: 2500,
+      price: 3000,
       description: '',
       image: 'https://drive.google.com/uc?id=1a1slbP_scP-sDx_e29d9UXdgpqdLq9bJ'
     },
@@ -324,7 +325,7 @@ export default {
       categoryId: '5',
       id: '206',
       name: 'JUGO DEL VALLE PERSONAL',
-      price: 2500,
+      price: 3000,
       image: 'https://drive.google.com/uc?id=1a1slbP_scP-sDx_e29d9UXdgpqdLq9bJ'
     },
     {
@@ -504,11 +505,11 @@ export default {
       id: '122',
       name: 'COSTILLAS DE CERDO A LA BBQ',
       price: 25000,
-      description: '500 Gms de costillas ahumadas bañadas en salsa BBQ acompañadas de papas criollas al vapor',
+      description: '500 Gms de costillas ahumadas bañadas en salsa BBQ acompañad5 de papas criollas al vapor',
       image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC'
     },
     {
-      categoryId: '11',
+      categoryId: '4',
       id: '123',
       name: 'ALITAS DE POLLO',
       price: 13500,
@@ -516,12 +517,30 @@ export default {
       image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC'
     },
     {
-      categoryId: '11',
+      categoryId: '4',
       id: '124',
-      name: 'TOSTONES',
+      name: 'TOSTON DE CARNE',
       price: 11500,
       description: 'pollo con champiñones o carne desmechada',
-      image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC'
+      image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC',
+      additionas: [
+        { id: 'add_tt_001', name: 'Queso', price: 0 },
+        { id: 'add_tt_002', name: 'Maiz Tierno', price: 0 },
+        { id: 'add_tt_004', name: 'Pollo con champiñones', price: 0 }
+      ]
+    },
+    {
+      categoryId: '4',
+      id: '125',
+      name: 'TOSTON DE POLLO',
+      price: 11500,
+      description: 'pollo con champiñones o carne desmechada',
+      image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC',
+      additionas: [
+        { id: 'add_tt_001', name: 'Queso', price: 0 },
+        { id: 'add_tt_002', name: 'Maiz Tierno', price: 0 },
+        { id: 'add_tt_003', name: 'Carne desmechada', price: 0 }
+      ]
     },
     // {
     //   categoryId: '11',
