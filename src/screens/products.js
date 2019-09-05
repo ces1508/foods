@@ -37,9 +37,9 @@ class ProductsScreen extends Component {
           renderItem={({ item }) => <ProductITem
             product={{
               ...item,
-              breads: category.breads || [],
-              additionals: category.additionals || [],
-              without: category.without || []
+              breads: item.breads || category.breads || [],
+              additionals: item.additionals || category.additionals || [],
+              without: item.without || category.without || []
             }}
             navigation={this.props.navigation} />}
         />

@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  ImageBackground,
+  Image,
   View,
   Text,
   StyleSheet,
@@ -10,16 +10,12 @@ import {
 const Category = props => {
   let { image, name } = props.category
   return (
-    <ImageBackground
-      resizeMode='cover'
-      style={styles.image}
-      source={{ uri: image }}>
-      <TouchableOpacity onPress={() => props.navigation.navigate('products', { category: props.category })}>
-        <View style={styles.container}>
-          <Text style={styles.name}>{name}</Text>
-        </View>
-      </TouchableOpacity>
-    </ImageBackground>
+    <TouchableOpacity onPress={() => props.navigation.navigate('products', { category: props.category })}>
+      <Image
+        resizeMode='stretch'
+        style={styles.image}
+        source={{ uri: image }} />
+    </TouchableOpacity>
   )
 }
 
@@ -28,7 +24,7 @@ export default Category
 const styles = StyleSheet.create({
   image: {
     width: '100%',
-    height: 150,
+    height: 200,
     marginVertical: 5,
     borderRadius: 10,
     overflow: 'hidden'

@@ -8,6 +8,7 @@ import Form from '../screens/form'
 import Theme from '../Theme'
 import FavoriteScreen from '../screens/favorites'
 import Product from '../screens/product'
+import LocationsScreen from '../screens/locations'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const defualtHeaderStyles = {
@@ -61,15 +62,31 @@ const TabStack = createBottomTabNavigator({
     navigationOptions: {
       tabBarLabel: 'Mis Favoritos'
     }
+  },
+  locations: {
+    screen: LocationsScreen,
+    navigationOptions: {
+      tabBarLabel: 'Sedes'
+    }
   }
 },
 {
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ tintColor }) => {
       let { routeName } = navigation.state
-      let iconName = 'hamburger'
-      if (routeName !== 'home') {
-        iconName = 'star'
+      let iconName = ''
+      switch (routeName) {
+        case 'home':
+          iconName = 'hamburger'
+          break
+        case 'favorites': 
+          iconName = 'star'
+          break
+        case 'locations':
+          iconName = 'map-marker'
+          break
+        default:
+          iconName = 'crosshairs-gps'
       }
       return <Icon name={iconName} color={tintColor} size={20} />
     }
@@ -80,7 +97,7 @@ const TabStack = createBottomTabNavigator({
     labelStyle: {
       fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
       fontWeight: 'normal',
-      fontSize: 15
+      fontSize: 13
     },
     style: { backgroundColor: Theme.colors.maingBgColor }
   }

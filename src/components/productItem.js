@@ -29,7 +29,6 @@ const ProductItem = props => {
     || props.product.without.length > 0) {
       props.navigation.navigate('product', { product: props.product })
     } else {
-      console.log('products', props.product)
       props.showModal()
       props.setProductToAdd(props.product)
     }

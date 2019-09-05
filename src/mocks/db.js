@@ -1,9 +1,21 @@
 export default {
+  locations: [
+    {
+      id: 'loc_0001',
+      name: 'Sede La Gaitana',
+      position: { lat: '2.930867', long: '-75.269081' }
+    },
+    {
+      id: 'loc_0002',
+      name: 'Sede El Jardin',
+      position: { lat: '2.941177', long: '-75.263191' }
+    }
+  ],
   categories: [
     {
       id: '1',
       'name': 'Hamburgesas',
-      image: 'https://drive.google.com/uc?id=1nLFKib_0fMCpt-1wl11WFbG3NMVEmy1p',
+      image: 'https://drive.google.com/uc?id=1zRi13qkrXaaaQN4TOYWWMdCnVINUkaJK',
       breads: [
         { id: 'bread__001', name: 'Orégano', price: 0, type: 'bread' },
         { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
@@ -39,7 +51,7 @@ export default {
     {
       id: '2',
       'name': 'Perros Calientes',
-      image: 'https://drive.google.com/uc?id=1T8lJk5fkF-Nb3lYAcCZNKn6yooCzolB0',
+      image: 'https://drive.google.com/uc?id=1Sy8oURp-lF6QMxZk3zjZ2JSeVJsOZurU',
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
@@ -73,7 +85,7 @@ export default {
     {
       id: '3',
       'name': 'Sandwiches',
-      image: 'https://drive.google.com/uc?id=1ynXIXyMiaWmgT7F79RY_Fxh9v7_Zu5U2',
+      image: 'https://drive.google.com/uc?id=1Q7ywwAn-4WR6nto1YmWh4fp5oTwuHe97',
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
@@ -118,12 +130,12 @@ export default {
     {
       id: '12',
       name: 'Acompañantes',
-      image: 'https://drive.google.com/uc?id=1ep8v82CMRlR92aVO0cAZPfH7GzX1wikY'
+      image: 'https://drive.google.com/uc?id=1lCklrsIQVN1QkvcE6kaWX44rjH7pEybB'
     },
     {
       id: '4',
       'name': 'Especiales',
-      image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC'
+      image: 'https://drive.google.com/uc?id=1ssaHVOH3np07nmEiAX6W368xzQc-djcr'
     },
     {
       id: '13',
@@ -140,28 +152,28 @@ export default {
     {
       id: '14',
       name: 'Té',
-      image: 'https://drive.google.com/uc?id=1Rz6IfQ4vdMttZHzVvzVbB-CPSFMoD3We'
+      image: 'https://drive.google.com/uc?id=1cid1H1U4uCiLEFObGFsiVCf0G6z6D5BO'
     },
     {
       id: '5',
       'name': 'Bebidas Geseosas',
-      image: 'https://drive.google.com/uc?id=1a1slbP_scP-sDx_e29d9UXdgpqdLq9bJ'
+      image: 'https://drive.google.com/uc?id=1jpwiZ61batQkvbNEq6QnZ3RUDtM79-qX'
     },
     {
       id: '6',
-      'name': 'Cervezas Nacionales',
-      image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
+      'name': 'Cervezas',
+      image: 'https://drive.google.com/uc?id=1DMJkaKTCzVnCEOjWMQKG6JWG8JREf200'
     },
-    {
-      id: '7',
-      'name': 'Cervezas Importadas',
-      image: 'https://drive.google.com/uc?id=1aoDnhDKLnEVo5I0f-9bFg4QLVTJOa2qU'
-    },
-    {
-      id: '8',
-      name: 'Cervezas Artesanales',
-      image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
-    }
+    // {
+      // id: '7',
+    //   'name': 'Cervezas Importadas',
+    //   image: 'https://drive.google.com/uc?id=1aoDnhDKLnEVo5I0f-9bFg4QLVTJOa2qU'
+    // },
+    // {
+    //   id: '8',
+    //   name: 'Cervezas Artesanales',
+    //   image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
+    // }
   ],
   products: [
     {
@@ -358,28 +370,28 @@ export default {
       image: 'https://drive.google.com/uc?id=1ppvFFCHi0JOrJJvGDRctqBoQml1mGdNj'
     },
     {
-      categoryId: '7',
+      categoryId: '6',
       id: '241',
       name: 'CERVEZA CORONA',
       price: 7000,
       image: 'https://drive.google.com/uc?id=1aoDnhDKLnEVo5I0f-9bFg4QLVTJOa2qU'
     },
     {
-      categoryId: '8',
+      categoryId: '6',
       id: '251',
       name: 'CERVEZA TERRACOTA NIVAL',
       price: 7500,
       image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
     },
     {
-      categoryId: '8',
+      categoryId: '6',
       id: '252',
       name: 'CERVEZA TERRACOTA SALARIUN',
       price: 7500,
       image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
     },
     {
-      categoryId: '8',
+      categoryId: '6',
       id: '253',
       name: 'CERVEZA ARTESANAL TERRACOTA',
       price: 7500,
