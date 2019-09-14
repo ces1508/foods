@@ -15,7 +15,7 @@ export default {
     {
       id: '1',
       'name': 'Hamburgesas',
-      image: 'https://drive.google.com/uc?id=1zRi13qkrXaaaQN4TOYWWMdCnVINUkaJK',
+      image: 'https://drive.google.com/uc?id=12owKOR_ctR-je3vg393P7N1qLT_NwAAE',
       breads: [
         { id: 'bread__001', name: 'Orégano', price: 0, type: 'bread' },
         { id: 'bread__002', name: 'Arabe', price: 0, type: 'bread' },
@@ -33,7 +33,7 @@ export default {
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
         { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
-        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
         { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
         { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 5000, type: 'add' },
         { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2000, type: 'add' },
@@ -42,7 +42,7 @@ export default {
         { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 1000, type: 'add' },
         { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2000, type: 'add' },
         { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2000, type: 'add' },
-        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 3000, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOGO DE LA ABUELA', price: 3000, type: 'add' },
         // { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2000, type: 'add' },
         { id: 'add__015', name: 'SALSA BBQ', price: 500, type: 'add' },
         { id: 'add__016', name: 'SALSA SESAMO', price: 500, type: 'add' }
@@ -51,12 +51,12 @@ export default {
     {
       id: '2',
       'name': 'Perros Calientes',
-      image: 'https://drive.google.com/uc?id=1Sy8oURp-lF6QMxZk3zjZ2JSeVJsOZurU',
+      image: 'https://drive.google.com/uc?id=11ITrdjr-gL-bNmfxkXA5SR2291NqmP9Q',
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
         { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
-        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
         { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
         { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 5000, type: 'add' },
         { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2000, type: 'add' },
@@ -65,7 +65,7 @@ export default {
         { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 1000, type: 'add' },
         { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2000, type: 'add' },
         { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2000, type: 'add' },
-        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 3000, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOGO DE LA ABUELA', price: 3000, type: 'add' },
         { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2000, type: 'add' },
         { id: 'add__015', name: 'SALSA BBQ', price: 500, type: 'add' },
         { id: 'add__016', name: 'SALSA SESAMO', price: 500, type: 'add' }
@@ -86,12 +86,12 @@ export default {
     {
       id: '3',
       'name': 'Sandwiches',
-      image: 'https://drive.google.com/uc?id=1Q7ywwAn-4WR6nto1YmWh4fp5oTwuHe97',
+      image: 'https://drive.google.com/uc?id=1zXicgttHpC7ge5-9YkGcoCtp5GX1OspT',
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
         { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
         { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
-        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDAR', price: 2000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
         { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
         { id: 'add__006', name: 'ADICIÓN DE CARNE RELLENA ESPECIAL CHEDDAR', price: 5000, type: 'add' },
         { id: 'add__007', name: 'ADICIÓN DE TOCINETA', price: 2000, type: 'add' },
@@ -100,7 +100,7 @@ export default {
         { id: 'add__010', name: 'ADICIÓN DE MAIZ DULCE', price: 1000, type: 'add' },
         { id: 'add__011', name: 'ADICIÓN DE JALAPEÑOS', price: 2000, type: 'add' },
         { id: 'add__012', name: 'ADICIÓN DE PEPINILLOS', price: 2000, type: 'add' },
-        { id: 'add__013', name: 'ADICIÓN DE HOHO DE LA ABUELA', price: 3000, type: 'add' },
+        { id: 'add__013', name: 'ADICIÓN DE HOGO DE LA ABUELA', price: 3000, type: 'add' },
         { id: 'add__014', name: 'ADICIÓN DE PLATANO', price: 2000, type: 'add' },
         { id: 'add__015', name: 'SALSA BBQ', price: 500, type: 'add' },
         { id: 'add__016', name: 'SALSA SESAMO', price: 500, type: 'add' }
@@ -126,22 +126,22 @@ export default {
     {
       id: '11',
       name: 'Otras Delicias',
-      image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC'
+      image: 'https://drive.google.com/uc?id=1ahIOPfDN4EPgxq9Oz-576zRBcXUkZK-r'
     },
     {
       id: '12',
       name: 'Acompañantes',
-      image: 'https://drive.google.com/uc?id=1lCklrsIQVN1QkvcE6kaWX44rjH7pEybB'
+      image: 'https://drive.google.com/uc?id=1IM7x3oYV_J0lRrsjNXTZ95A99Rr_Dwm7'
     },
     {
       id: '4',
       'name': 'Especiales',
-      image: 'https://drive.google.com/uc?id=1ssaHVOH3np07nmEiAX6W368xzQc-djcr'
+      image: 'https://drive.google.com/uc?id=1zseSvkVD5OXRx3-69aDhi8W8-xhT6OPR'
     },
     {
       id: '13',
       name: 'Jugos Naturales',
-      image: 'https://drive.google.com/uc?id=1CMqukjVVVVAQFixleKlTBfTmxGeusJi_',
+      image: 'https://drive.google.com/uc?id=1zs29Mh0rziAIdWIUBvd8iesaikyCju47',
       additionals: [
         { id: 'wout__001', name: 'bajo en azucar', price: 0, type: 'remove' }
       ],
@@ -153,17 +153,17 @@ export default {
     {
       id: '14',
       name: 'Té',
-      image: 'https://drive.google.com/uc?id=1cid1H1U4uCiLEFObGFsiVCf0G6z6D5BO'
+      image: 'https://drive.google.com/uc?id=1kheN2mVnYuJJLsGxH_zBKqWrnIiXy17o'
     },
     {
       id: '5',
-      'name': 'Bebidas Geseosas',
-      image: 'https://drive.google.com/uc?id=1jpwiZ61batQkvbNEq6QnZ3RUDtM79-qX'
+      name: 'Bebidas Geseosas',
+      image: 'https://drive.google.com/uc?id=15K8Yx1FjcTAy0jduMFHC9S39dfoCdZcg'
     },
     {
       id: '6',
-      'name': 'Cervezas',
-      image: 'https://drive.google.com/uc?id=1DMJkaKTCzVnCEOjWMQKG6JWG8JREf200'
+      name: 'Cervezas',
+      image: 'https://drive.google.com/uc?id=1e1emCBHvGVdnNFJjU1sclnMqe_fNCUmL'
     },
     // {
       // id: '7',
@@ -399,6 +399,13 @@ export default {
       image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
     },
     {
+      categoryId: '6',
+      id: '254',
+      name: 'CERVEZA ARTESANAL BBC',
+      price: 7000,
+      image: 'https://drive.google.com/uc?id=1ui9dbv2rFXyvdPWnHqtW2B1t-R1Q9Zz-'
+    },
+    {
       categoryId: '2',
       id: '051',
       name: 'PERRO HAWAIANO',
@@ -523,10 +530,12 @@ export default {
       price: 11500,
       description: 'pollo con champiñones o carne desmechada',
       image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC',
-      additionas: [
-        { id: 'add_tt_001', name: 'Queso', price: 0 },
-        { id: 'add_tt_002', name: 'Maiz Tierno', price: 0 },
-        { id: 'add_tt_004', name: 'Pollo con champiñones', price: 0 }
+      additionals: [
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
+        { id: 'add_tt_002', name: 'Maiz Tierno', price: 1000, type: 'add' },
+        { id: 'add_tt_004', name: 'Pollo con champiñones', price: 3000, type: 'add' }
       ]
     },
     {
@@ -536,10 +545,12 @@ export default {
       price: 11500,
       description: 'pollo con champiñones o carne desmechada',
       image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC',
-      additionas: [
-        { id: 'add_tt_001', name: 'Queso', price: 0 },
-        { id: 'add_tt_002', name: 'Maiz Tierno', price: 0 },
-        { id: 'add_tt_003', name: 'Carne desmechada', price: 0 }
+      additionals: [
+        { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
+        { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
+        { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
+        { id: 'add_tt_002', name: 'Maiz Tierno', price: 1000, type: 'add' },
+        { id: 'add_tt_003', name: 'Carne desmechada', price: 3000, type: 'add' }
       ]
     },
     // {
@@ -741,7 +752,7 @@ export default {
     {
       categoryId: '14',
       id: '207',
-      name: 'TE SABORIZADO LIMÓN',
+      name: 'TE FUZE TEA LIMÓN',
       price: 2500,
       description: '',
       image: 'https://drive.google.com/uc?id=1Rz6IfQ4vdMttZHzVvzVbB-CPSFMoD3We'
@@ -749,7 +760,7 @@ export default {
     {
       categoryId: '14',
       id: '208',
-      name: 'TÉ SABORIZADO DURAZNO',
+      name: 'TÉ FUZE TEA DURAZNO',
       price: 2500,
       description: '',
       image: 'https://drive.google.com/uc?id=1Rz6IfQ4vdMttZHzVvzVbB-CPSFMoD3We'
@@ -757,7 +768,7 @@ export default {
     {
       categoryId: '14',
       id: '209',
-      name: 'TE SABORIZADO MANZANILLA',
+      name: 'TE FUZE TEA MANZANILLA',
       price: 2500,
       description: '',
       image: 'https://drive.google.com/uc?id=1Rz6IfQ4vdMttZHzVvzVbB-CPSFMoD3We'
@@ -765,8 +776,16 @@ export default {
     {
       categoryId: '14',
       id: '210',
-      name: 'TÉ SABOIRIZADO DE MANZANA',
+      name: 'TÉ FUZE TEA DE MANZANA',
       price: 2500,
+      description: '',
+      image: 'https://drive.google.com/uc?id=1Rz6IfQ4vdMttZHzVvzVbB-CPSFMoD3We'
+    },
+    {
+      categoryId: '14',
+      id: '211',
+      name: 'TÉ SABORIZADO HATSU',
+      price: 4500,
       description: '',
       image: 'https://drive.google.com/uc?id=1Rz6IfQ4vdMttZHzVvzVbB-CPSFMoD3We'
     }

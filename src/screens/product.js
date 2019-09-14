@@ -48,6 +48,7 @@ class Product extends Component {
     this.scroll = new Animated.Value(0)
   }
   componentWillMount () {
+    console.log('this props', this.props)
     let product = this.props.navigation.getParam('product')
     let sections = []
     if (product.breads.length > 0) {
@@ -124,6 +125,7 @@ class Product extends Component {
   addToShoppingCart () {
     let { product, selected, bread, quantity } = this.state
     let listOfSelected = [...selected.values()]
+    console.log('selecteds ', listOfSelected)
     this.props.addProductToCart({
       id: uuid(),
       name: product.name,
@@ -186,7 +188,7 @@ class Product extends Component {
             minValue={1}
             onChange={value => this.setState({ quantity: value })} />
           <Text>{numeral(this.calculatePrice() * this.state.quantity).format('$0,0')}</Text>
-          <Text onPress={this.addToShoppingCart} style={styles.buttonAdd}>Agregar al carro</Text>
+          <Text onPress={this.addToShoppingCart} style={styles.buttonAdd}>ORDENAR</Text>
         </View>
       </View>
     )

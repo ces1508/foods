@@ -23,7 +23,6 @@ const mapDispatchToProps = {
 const ProductItem = props => {
   let { image, name, description, price } = props.product
   let handlePress = () => {
-    console.log(props.product)
     if (props.product.additionals.length > 0
     || props.product.breads.length > 0
     || props.product.without.length > 0) {

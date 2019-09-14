@@ -1,20 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Image,
   View,
-  Text,
   StyleSheet,
   TouchableOpacity
 } from 'react-native'
+import { PacmanIndicator } from 'react-native-indicators'
+import Theme from '../Theme'
 
 const Category = props => {
   let { image, name } = props.category
+  const [isLoaded, setIsLoaded] = useState(false)
   return (
     <TouchableOpacity onPress={() => props.navigation.navigate('products', { category: props.category })}>
-      <Image
-        resizeMode='stretch'
-        style={styles.image}
-        source={{ uri: image }} />
+        <Image
+          onLoad={() => setIsLoaded(true)}
+          resizeMode='stretch'
+          style={[styles.image, { height: !isLoaded ? 0 : 200 }]}
+          source={{ uri: image }} />
+        {!isLoaded ?
+          <View style={[styles.container, { height: 200 }]}>
+            <PacmanIndicator color={Theme.colors.secondary} size={60} /> 
+          </View>
+        : null}
     </TouchableOpacity>
   )
 }
