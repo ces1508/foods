@@ -513,7 +513,7 @@ export default {
       name: 'COSTILLAS DE CERDO A LA BBQ',
       price: 25000,
       description: '500 Gms de costillas ahumadas bañadas en salsa BBQ acompañad5 de papas criollas al vapor',
-      image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC'
+      image: 'https://drive.google.com/uc?id=1-AWxl3_p1e7rtl7RGX12mGim025rQmjL'
     },
     {
       categoryId: '4',
@@ -521,7 +521,7 @@ export default {
       name: 'ALITAS DE POLLO',
       price: 13500,
       description: '8 piezas de alita acompañadas con papas criollas al vapor',
-      image: 'https://drive.google.com/uc?id=15jTkL_Q5XmfOqfJRDm3elOjxl6uP3bnC'
+      image: 'https://drive.google.com/uc?id=12B_KXVFG-6S1tE0rsfa4xIMiCmQ6vgut'
     },
     {
       categoryId: '4',

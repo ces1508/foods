@@ -13,6 +13,7 @@ import Theme from '../Theme'
 import { showMessage } from 'react-native-flash-message'
 import { setShoppingCart } from '../ducks/shoppingCart'
 import { connect } from 'react-redux'
+const mapStateToProps = state => ({ products: state.shoppingCart.products })
 
 const mapDispatchTopProps = { setShoppingCart }
 
@@ -61,6 +62,10 @@ class Form extends Component {
   }
   _onKeyboardHide () {
     this.setState({ showButton: true })
+  }
+  async sendEmail () {
+    let products = this.props.products
+    
   }
   handleSubmit () {
     let { name, phone, barrio, address } = this.state
@@ -156,7 +161,7 @@ class Form extends Component {
   }
 }
 
-export default connect(() => ({}), mapDispatchTopProps)(Form)
+export default connect(() => mapStateToProps, mapDispatchTopProps)(Form)
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
