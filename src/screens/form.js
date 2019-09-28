@@ -6,7 +6,8 @@ import {
   TextInput,
   StyleSheet,
   KeyboardAvoidingView,
-  Keyboard
+  Keyboard,
+  Platform
 } from 'react-native'
 import Select from '../components/select'
 import Theme from '../Theme'
@@ -181,10 +182,10 @@ const styles = StyleSheet.create({
     zIndex: 10
   },
   text: {
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   buttonText: {
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
     color: Theme.colors.text.secundary,
     fontSize: 22,
     textAlign: 'center',

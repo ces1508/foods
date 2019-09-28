@@ -15,7 +15,8 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-  Animated
+  Animated,
+  Platform
 } from 'react-native'
 import numeral from 'numeral'
 import Numeric from 'react-native-numeric-input'
@@ -217,7 +218,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     flex: 1,
     color: '#fff',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   container: {
     flex: 1
@@ -229,7 +230,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     color: '#fff',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   sectionTitle: {
     padding: 10,
@@ -237,7 +238,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     backgroundColor: '#d4d4d4',
     color: '#000',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   list: {
     flex: 1
@@ -270,7 +271,7 @@ const styles = StyleSheet.create({
   itemTitle: {
     marginHorizontal: 8,
     flex: 1,
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   actionContainer: {
     paddingVertical: 5,
@@ -292,6 +293,6 @@ const styles = StyleSheet.create({
     color: Theme.colors.maingBgColor,
     fontWeight: 'bold',
     backgroundColor: Theme.colors.secondary,
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
   }
 })

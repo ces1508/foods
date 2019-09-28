@@ -4,7 +4,8 @@ import {
   Text,
   FlatList,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from 'react-native'
 import PropTypes from 'prop-types'
 import Modal from 'react-native-modal'
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   },  
   addition: {
     flexDirection: 'row',
@@ -102,6 +103,6 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
     borderRadius: 5,
     borderWidth: 1,
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })

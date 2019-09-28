@@ -4,7 +4,8 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  ScrollView
+  ScrollView,
+  Platform
 } from 'react-native'
 import Theme from '../Theme'
 import Quantity from 'react-native-numeric-input'
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     color: Theme.colors.title,
     marginBottom: 15,
     textAlign: 'center',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   },
   containerAdds: {
     paddingLeft: 15
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
     backgroundColor: Theme.colors.maingBgColor
   },
   buttonText: {
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
     color: Theme.colors.secondary
   }
 })

@@ -2,7 +2,8 @@ import React from 'react'
 import {
   View,
   StyleSheet,
-  Text
+  Text,
+  Platform
 } from 'react-native'
 import AddButton from '../components/addButton'
 import ProductCard from '../components/productCard'
@@ -58,7 +59,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(ProductItem)
 const styles = StyleSheet.create({
   productText: {
     fontSize: 15,
-    fontFamily: 'UNIVERSAL-SCRIPT-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SCRIPT Personal Use' : 'UNIVERSAL-SCRIPT-PERSONAL-USE'
   },
   price: {
     color: Theme.colors.title,

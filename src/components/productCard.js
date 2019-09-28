@@ -3,7 +3,8 @@ import {
   TouchableOpacity,
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from 'react-native'
 import PropTypes from 'prop-types'
 import ProductImage from './ProductImage'
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginRight: 50,
     // fontFamily: 'UNIVERSAL-SCRIPT-PERSONAL-USE'
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 
