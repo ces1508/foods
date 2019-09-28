@@ -24,7 +24,7 @@ export default class LocationsScreens extends PureComponent {
       <View style={{ marginTop: 50, marginHorizontal: 15 }}>
         <Text
           style={{
-            fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+            fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
             color: '#fff',
             marginBottom: 15
           }}
@@ -43,7 +43,7 @@ export default class LocationsScreens extends PureComponent {
               paddingHorizontal: 10
             }}>
               <Text style={{
-                fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+                fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
               }}>{item.name}</Text>
               <View style={{
                 display: "flex",

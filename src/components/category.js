@@ -3,7 +3,8 @@ import {
   Image,
   View,
   StyleSheet,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform
 } from 'react-native'
 import { PacmanIndicator } from 'react-native-indicators'
 import Theme from '../Theme'
@@ -49,6 +50,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30,
     color: '#fff',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Platform } from 'react-native'
 import { createStackNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation'
 import CategoriesScreen from '../screens/categories'
 import ProductsScreen from '../screens/products'
@@ -15,7 +16,7 @@ const defualtHeaderStyles = {
   headerTintColor: Theme.colors.secondary,
   headerTitleStyle: {
     fontWeight: 'normal',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
   },
   headerStyle: {
     backgroundColor: Theme.colors.maingBgColor
@@ -95,7 +96,7 @@ const TabStack = createBottomTabNavigator({
     activeTintColor: Theme.colors.secondary,
     inactiveTintColor: Theme.colors.white,
     labelStyle: {
-      fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+      fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
       fontWeight: 'normal',
       fontSize: 13
     },

@@ -4,7 +4,8 @@ import {
   ImageBackground,
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from 'react-native'
 import Theme from '../Theme'
 
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: Theme.colors.text.yellow,
     fontWeight: 'bold',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

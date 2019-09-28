@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { FlatList, View, Text, Dimensions } from 'react-native'
+import { FlatList, View, Text, Dimensions, Platform } from 'react-native'
 import Product from '../components/productItem'
 import { connect } from 'react-redux'
 import Theme from '../Theme'
@@ -21,7 +21,7 @@ class FavoritesScreen extends PureComponent {
           <Text 
             numberOfLines={2}
             style={{
-              fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+              fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE',
               color: '#fff', 
               fontSize: 20 }}>Aún no tienes ningun favorito</Text>
         </View>}

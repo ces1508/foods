@@ -2,7 +2,8 @@ import React from 'react'
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from 'react-native'
 import Quantity from 'react-native-numeric-input'
 import ShoppingCartHeader from '../components/shoppingCartHeader'
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
   },
   descriptionTitle: {
     textAlign: 'center',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   },
   containerButtons: {
     justifyContent: 'center',
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     marginVertical: 8,
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 

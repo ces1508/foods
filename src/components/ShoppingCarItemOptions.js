@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from 'react-native'
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
 import uuid from 'uuid/v1'
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
   plusName: {
     textAlign: 'center',
     marginLeft: 10,
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE'
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })
 
