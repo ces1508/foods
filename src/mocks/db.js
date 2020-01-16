@@ -31,7 +31,7 @@ export default {
       ],
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
-        { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
+        { id: 'add__002', name: 'ADICIÓN DE CARNE DE POLLO', price: 3000, type: 'add' },
         { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
         { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
         { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
@@ -54,7 +54,7 @@ export default {
       image: 'https://drive.google.com/uc?id=11ITrdjr-gL-bNmfxkXA5SR2291NqmP9Q',
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
-        { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
+        { id: 'add__002', name: 'ADICIÓN DE CARNE DE POLLO', price: 3000, type: 'add' },
         { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
         { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
         { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },
@@ -89,7 +89,7 @@ export default {
       image: 'https://drive.google.com/uc?id=1zXicgttHpC7ge5-9YkGcoCtp5GX1OspT',
       additionals: [
         { id: 'add__001', name: 'ADICIÓN DE CARNE DE RES', price: 3000, type: 'add' },
-        { id: 'add__002', name: 'ADICION DE CARNE DE POLLO', price: 3000, type: 'add' },
+        { id: 'add__002', name: 'ADICIÓN DE CARNE DE POLLO', price: 3000, type: 'add' },
         { id: 'add__003', name: 'ADICIÓN DE QUESO DOBLE CREMA', price: 1000, type: 'add' },
         { id: 'add__004', name: 'ADICIÓN DE QUESO CHEDDAR', price: 2000, type: 'add' },
         { id: 'add__005', name: 'ADICIÓN DE QUESO MOZARELLA', price: 1500, type: 'add' },

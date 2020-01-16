@@ -4,7 +4,8 @@ import {
   FlatList,
   Text,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from 'react-native'
 import ShoppingCartItem from '../components/shoppingCartItem'
 import ShoppingCartPrice from '../components/shoppingCartPrice'
@@ -50,6 +51,6 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
     height: '100%',
     fontWeight: 'bold',
-    fontFamily: 'UNIVERSAL-SANS-PERSONAL-USE',
+    fontFamily: Platform.OS === 'ios' ? 'UNIVERSAL SANS PERSONAL USE' : 'UNIVERSAL-SANS-PERSONAL-USE'
   }
 })

@@ -9,6 +9,7 @@ import {
   Keyboard,
   Platform
 } from 'react-native'
+import axios from 'axios'
 import Select from '../components/select'
 import Theme from '../Theme'
 import { showMessage } from 'react-native-flash-message'
@@ -29,6 +30,7 @@ class Form extends Component {
     this._onKeyboardShow = this._onKeyboardShow.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
+      sending: false,
       observations: '',
       showButton: true,
       name: '',
@@ -68,11 +70,14 @@ class Form extends Component {
     let products = this.props.products
     
   }
-  handleSubmit () {
-    let { name, phone, barrio, address } = this.state
+  async handleSubmit () {
+    const products = [...this.props.products].map(item => item[1])
+    let { name, phone, barrio, address, observations, selectedCity, sending } = this.state
+    if (sending) return null
+    this.setState({ sending: true })
     if (!name || !phone || !barrio || !address) {
       return showMessage({
-        type: 'warning',
+        type: 'error',
         icon: 'auto',
         message: 'Por favor completa todos los campos'
       })
@@ -83,9 +88,26 @@ class Form extends Component {
       hideStatusBar: true,
       message: `Tù pedido se ha procesado con èxito`
     }
+    let data = {
+      products,
+      observations,
+      user: { name, address, phone, barrio, city: selectedCity }
+    }
+
+    try {
+      let request = await axios.post('http://ec2-13-52-104-177.us-west-1.compute.amazonaws.com/notify', data)
+      this.setState({ sending: false })
+      this.props.setShoppingCart([])
+      this.props.navigation.navigate('tab')
+    } catch (e) {
+      this.setState({ sending: false })
+      console.log('error ', e.response)
+      message.type = 'error'
+      message.message = 'lo sentimos estamos presentado problemas, por favor intanta mas tarde'
+    }
     showMessage(message)
-    this.props.setShoppingCart([])
-    this.props.navigation.navigate('tab')
+    // this.props.setShoppingCart([])
+    // this.props.navigation.navigate('tab')
   }
   render () {
     return (
@@ -144,14 +166,15 @@ class Form extends Component {
               multiline
               value={this.state.observations}
               label='Observaciones'
-              onChangeText={observations => this.setState({ observations })}
+              returnKeyType='done'
+              onChangeText={observations => this.setState({ observations, showButton: true })}
             />
           </View>
           {
             this.state.showButton
               ? <View style={styles.button}>
                 <Text style={styles.buttonText} onPress={this.handleSubmit}>
-                  ORDENAR
+                  { this.state.sending ? 'CREANDO ORDEN ....' : 'ORDENAR' }
                 </Text>
               </View>
               : null
